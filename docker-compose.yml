@@ -19,6 +19,8 @@ services:
         - REACT_APP_BACKEND_URL=${BACKEND_URL}/
     ports:
       - ${FRONTEND_PORT}:3333
+    depends_on:
+      - backend
 
   redis:
     image: redis:alpine
